@@ -12,3 +12,13 @@ def line (queue)
     puts "The line is currently:#{queue_list}"
   end
 end 
+
+def take_a_number(queue, name)
+  queue.push(name)
+  puts "Welcome, #{name}. You are number #{queue.length} in line."
+end
+
+def now_serving(queue)
+  queue[0].class == String ? (puts "Currently serving #{queue[0]}.") : (puts "There is nobody waiting to be served!")
+  queue.shift
+end
